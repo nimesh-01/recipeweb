@@ -27,7 +27,7 @@ const Navbar = () => {
                 </NavLink>
                 <NavLink
                     className={({ isActive }) =>
-                        isActive ? 'text-red-300 text-base font-semibold' : 'font-semibold'
+                        isActive ? 'text-red-300 text-lg font-semibold' : 'font-semibold'
                     }
                     to="/recipes"
                 >
@@ -44,7 +44,7 @@ const Navbar = () => {
                 </NavLink>
                 <NavLink
                     className={({ isActive }) =>
-                        isActive ? 'text-red-300 text-base font-semibold' : 'font-semibold'
+                        isActive ? 'text-red-300 text-lg font-semibold' : 'font-semibold'
                     }
                     to="/fav"
                 >
