@@ -1,9 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import BlurText from "../../TextAnimation/BlurText/BlurText";
+const handleAnimationComplete = () => {
+  console.log('Animation completed!');
+};
 const Home = () => {
   const navigate = useNavigate();
-
   const categories = [
     { name: 'Breakfast', image: "https://tse4.mm.bing.net/th?id=OIP.7T24HQX1rb-bcbc4DjHOYgHaHa&pid=Api&P=0&h=220" },
     { name: 'Lunch', image: 'https://tse2.mm.bing.net/th?id=OIP.LF4UzQDTE-cnxpNuG0prVwHaHR&pid=Api&P=0&h=220' },
@@ -39,7 +41,14 @@ const Home = () => {
           backgroundImage: `url('https://images.unsplash.com/photo-1605478902830-bb7bc36d05a2?auto=format&fit=crop&w=1500&q=80')`,
         }}
       >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Find Your Next Favorite Recipe</h1>
+        <BlurText
+          text="Find Your Next Favorite Recipe"
+          delay={150}
+          animateBy="words"
+          direction="top"
+          onAnimationComplete={handleAnimationComplete}
+          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
+        />
       </section>
 
       {/* Categories */}
